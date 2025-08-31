@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+header {
+    text-align: center; /* Centers the heading */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4CAF50; /* A pleasant green for the heading */
+}
+
+/* Main gallery container to control scrolling */
+.gallery-container {
+    padding: 20px;
+    max-height: calc(100vh - 100px); /* Adjust height to enable scrolling */
+    overflow-y: auto; /* Adds a vertical scrollbar */
+}
+
+/* Gallery grid layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual image card styling */
+.image-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Makes the card a flex container */
+    flex-direction: column; /* Stacks the content vertically */
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent images */
+    object-fit: cover;
+    display: block;
+}
+
+/* Styling for the album name text */
+.album-name {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #555;
+    background-color: #f9f9f9; /* A slight different background for the text area */
+}
+
+/* Lightbox modal styling (if you plan to re-enable it) */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 95%;
+    max-height: 95%;
+    transition: transform 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}

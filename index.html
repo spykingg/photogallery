@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Image Gallery</h1>
+    </header>
+
+    <div class="gallery-container">
+        
+        <div class="gallery">
+            <div class="image-card" data-category="nature">
+                <img src="d1.jpeg" alt="Nature Album">
+                <div class="album-name">Nature's Beauty</div>
+            </div>
+            <div class="image-card" data-category="city">
+                <img src="urban_explore.jpeg" alt="City Album">
+                <div class="album-name">Urban Explorer</div>
+            </div>
+            <div class="image-card" data-category="nature">
+                <img src="green_field.jpeg" alt="Nature Album">
+                <div class="album-name">Green Fields</div>
+            </div>
+            <div class="image-card" data-category="animal">
+                <img src="wildlife.jpeg" alt="Animal Album">
+                <div class="album-name">Wild Kingdom</div>
+            </div>
+            <div class="image-card" data-category="city">
+                <img src="city.jpeg" alt="City Album">
+                <div class="album-name">City Lights</div>
+            </div>
+            <div class="image-card" data-category="animal">
+                <img src="creativespace.jpeg" alt="Animal Album">
+                <div class="album-name">My Creative Space</div>
+            </div>
+            <div class="image-card" data-category="city">
+                <img src="seasons.jpeg" alt="City Album">
+                <div class="album-name">Seasons of Life</div>
+            </div>
+            <div class="image-card" data-category="city">
+                <img src="movies.jpeg" alt="City Album">
+                <div class="album-name">Movies</div>
+            </div>
+            <div class="image-card" data-category="city">
+                <img src="sports.jpeg" alt="City Album">
+                <div class="album-name">Sports</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <button id="prevBtn" class="nav-btn">&lt;</button>
+        <button id="nextBtn" class="nav-btn">&gt;</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
